@@ -65,9 +65,12 @@ public class Main
                     break;
                 case 1:
                     String s_new = in.nextLine();
-                    System.out.println(s_new.substring(0,1).equals("+"));
-                    if (s_new.substring(0,1).equals("+"))
+                    if (s_new.substring(0,1).equals("+")){
+                        System.out.println(s);
                         s = s + "," + s_new.substring(1, s_new.length());
+                        System.out.println(s);
+                    }
+                        
                     else if (s_new.substring(0,1).equals("-"))
                         if (!s.contains(s_new.substring(1, s_new.length() ))){
                             System.out.println("Invalide value");                            
@@ -91,17 +94,17 @@ public class Main
     }
     
     
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("Task1 randomNumber");
-	    int[] arr = randomNumber(new int[11]);
+        int[] arr = randomNumber(new int[11]);
         for(int item : arr){
             System.out.print(" ");
             System.out.print(item);
         }
-    	System.out.println();
-    	System.out.println("Task2 StartLineNames");
-    	
-    	StartLineNames();
-	    	
-	}
+        System.out.println();
+        System.out.println("Task2 StartLineNames");
+        
+        StartLineNames();
+            
+    }
 }
